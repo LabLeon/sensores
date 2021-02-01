@@ -23,13 +23,13 @@ body {
 }
 
 .link:hover {
-    color: #02C39A;
-    background: #222423;
+    color: #F4F3F4;
+    background: #F8C35C;
     text-decoration: none;
 }
 
 .change-color {
-    background: #02C39A;
+    background: #AFAFAF;
 }
 
 .move-izqu {
@@ -178,7 +178,7 @@ body {
 }
 
 .container-tech {
-    background: #222423;
+    background: #02C39A;
     width: 100%;
 }
 
@@ -822,16 +822,16 @@ strong a:hover {
 }
 
 .panel-group {
-    margin-top: 50px;
+    margin-top: 20px;
     width: 80%;
     margin: 0 auto;
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .panel-group .panel {
-        background: transparent;
-    border-color: transparent;
+        background: #F2F2F2;
+    border-color: #F2F2F2;
     border: 0px;
     box-shadow: none;
 }
@@ -841,7 +841,7 @@ strong a:hover {
     line-height: 22px;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
-    color: #222423 !important;
+    color: #F2F2F2 !important;
 }
 
 .panel-body {
@@ -853,7 +853,7 @@ strong a:hover {
 
 .reto-green .accordion-toggle {
     padding: 5px;
-    background: #57D9D9;
+    background: #02C39A;
     padding-right: 30px;
 }
 
@@ -866,6 +866,24 @@ strong a:hover {
 .reto-yellow .accordion-toggle {
     padding: 5px;
     background: #F8C35C;
+    padding-right: 30px;
+}
+
+.reto-orange .accordion-toggle {
+    padding: 5px;
+    background: #f8885c;
+    padding-right: 30px;
+}
+
+.reto-purple .accordion-toggle {
+    padding: 5px;
+    background: #985cf8;
+    padding-right: 30px;
+}
+
+.reto-gray .accordion-toggle {
+    padding: 5px;
+    background: #AFAFAF;
     padding-right: 30px;
 }
 
@@ -902,7 +920,7 @@ strong a:hover {
 
 .reto-green .panel-heading [data-toggle="collapse"].collapsed:after,
 .reto-green .panel-heading [data-toggle="collapse"]:after {
-    color: #57D9D9;
+    color: #02C39A;
 }
 
 .reto-red .panel-heading [data-toggle="collapse"].collapsed:after,
@@ -913,6 +931,21 @@ strong a:hover {
 .reto-yellow .panel-heading [data-toggle="collapse"].collapsed:after,
 .reto-yellow .panel-heading [data-toggle="collapse"]:after {
     color: #F8C35C;
+}
+
+.reto-orange .panel-heading [data-toggle="collapse"].collapsed:after,
+.reto-orange .panel-heading [data-toggle="collapse"]:after {
+    color: #f8885c;
+}
+
+.reto-purple .panel-heading [data-toggle="collapse"].collapsed:after,
+.reto-purple .panel-heading [data-toggle="collapse"]:after {
+    color: #985cf8;
+}
+
+.reto-gray .panel-heading [data-toggle="collapse"].collapsed:after,
+.reto-gray .panel-heading [data-toggle="collapse"]:after {
+    color: #AFAFAF;
 }
 
 @media (max-width: 1024px) {

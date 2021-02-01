@@ -8,8 +8,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="icon" type="image/png" href="img/park.png">
 		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
-		<script src="https://use.fontawesome.com/1af8ef7b77.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Cabin:ital@1&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+        <script src="https://use.fontawesome.com/1af8ef7b77.js"></script>
+        
+        <!--/ Mapbox -->
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css' rel='stylesheet' />
+
 		<!--[if lt IE 9]>
 			<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
@@ -29,8 +34,8 @@
                 </div>
                 <div class="collapse navbar-collapse pull-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#clubes">SOBRE LOS SENSORES</a></li>
-                        <li class="active"><a href="#clubes">CALIDAD DEL AIRE</a></li>
+                        <li class="active"><a href="#giras">SOBRE LOS SENSORES</a></li>
+                        <li class="active"><a href="#temario">CALIDAD DEL AIRE</a></li>
                         <li class="active"><a href="#clubes">DATOS ABIERTOS</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
@@ -69,7 +74,7 @@
             </div><!-- /.container-city -->
         </div>
 
-        <!-- TEMARIO -->
+        <!-- SENSORES -->
         <div id="giras">
             <div class="container no-padding">
                 <div class="container-temario-interno">
@@ -78,13 +83,30 @@
                 </div>
             </div>
         </div>
+
+        <!-- Mapbox -->
+        <div id='map' style='width: 100%; height: 450px;'></div>
+            <script>
+                mapboxgl.accessToken = 'pk.eyJ1IjoicmljYXJkb21pcm9uIiwiYSI6ImNrM25zd2xxYTF0cHczbW4xanI4NnR5dXYifQ.Opb-lL0Si3GS8MUlG6fdsQ';
+                var map = new mapboxgl.Map({
+                container: 'map',
+                style: 'mapbox://styles/ricardomiron/ckkmvnf8m3hfm17p5jv54dlnf', // stylesheet location
+                center: [-101.6827918, 21.1213316], // starting position [lng, lat]
+                zoom: 12 // starting zoom
+                });
+            </script>
+
         <div id="temario-secundario">
             <div class="container no-padding">
                 <div class="container-temario-interno">
                 <h3>Acerca de:</h3> 
                 La información arrojada por los sensores es accesible para la Dirección General de Innovación, Gestión Ambiental, Movilidad, Obra Pública, Seguridad Pública, el Administrador de Servicios del Municipio, y el Alcalde Municipal. 
                 Sin embargo, siguiendo con la iniciativa de ser un Municipio Humano Inteligente se busca centralizar la información para que sea accesible y con capacidad de ser correlacionada por todo el Municipio.
-                    <p></p><br>
+                <p></p><br>
+
+                Actualmente se cuentan con 6 estaciones de medio ambiente que están distribuidos estratégicamente dentro de la ciudad para poder medir y complementar la información generada por otras estaciones de monitoreo. Cada una de estas estaciones mide más de 15 variables diferentes.
+                <p></p><br>
+
                 </div>
                 <div class="col-xs-12 no-padding">
                     <div class="col-sm-4">
@@ -165,9 +187,9 @@
                 </div>
              </div>
         </div>
-        <!-- END TEMARIO -->
+        <!-- END SENSORES -->
 
-        <!-- GIRAS -->
+        <!-- CALIDAD DEL AIRE -->
         <div id="temario">
             <div class="container no-padding">
                 <div class="container-temario-interno">
@@ -181,9 +203,78 @@
                 <div class="container-temario-interno">
 
 					El <a href="https://www.dof.gob.mx/nota_detalle.php?codigo=5579387&fecha=20/11/2019"> Índice de Calidad del Aire y Riesgos a la Salud</a> relaciona la concentración de  contaminantes con una categoría de calidad del aire, asignando un nivel de riesgo y las recomendaciones para la protección para la población en general. Por ejemplo, las partículas PM10 se calculan en una concentración promedio móvil ponderado de 12 horas*
-					<p></p><br>
+                    <p></p><br>
 
-					<h3>🟢 Buena:</h3> (PM10: 0 - 50) Disfruta las actividades al aire libre. Se considera que el riesgo es mínimo o nulo.
+                    <h3> PM10:</h3> Se denomina PM10 a pequeñas partículas sólidas o líquidas de polvo, cenizas, hollín, partículas metálicas, cemento o polen, dispersas en la atmósfera, y cuyo diámetro aerodinámico es menor que 10 µm (1 micrómetro corresponde la milésima parte de 1 milímetro). La exposición prolongada o repetitiva a las PM10 puede provocar efectos nocivos en el sistema respiratorio de las personas.
+                    <p></p><br>
+
+                    <!-- BUENA -->
+                    <div class="panel-group reto-green" id="accordion">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse1" aria-expanded="false">Buena (riesgo bajo) </a>
+                                </h4>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    (PM10: 0 - 50) Disfruta las actividades al aire libre. Se considera que el riesgo es mínimo o nulo.
+                                </div>
+                            </div>
+                    </div>
+                    <!-- MODERADA -->
+                    <div class="panel-group reto-yellow" id="accordion">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse2" aria-expanded="false">Aceptable (riesgo moderado) </a>
+                                </h4>
+                            </div>
+                            <div id="collapse2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    (PM10: 51 - 75) Considera reducir las actividades físicas vigorosas al aire libre. Las personas sensibles pueden experimentar síntomas respiratorios (asmáticos).
+                                </div>
+                            </div>
+                    </div>
+                    <!-- MALA -->
+                    <div class="panel-group reto-orange" id="accordion">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse3" aria-expanded="false">Mala (riesgo alto) </a>
+                                </h4>
+                            </div>
+                            <div id="collapse3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    (PM10: 76 - 155) Evita las actividades físicas (tanto moderadas como vigorosas) al aire libre. Para todos los contaminantes criterio existe probabilidad de disminución en la capacidad pulmonar en personas sanas.
+                                </div>
+                            </div>
+                    </div>
+                    <!-- MUY MALA -->
+                    <div class="panel-group reto-red" id="accordion">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse4" aria-expanded="false">Muy mala (riesgo muy alto) </a>
+                                </h4>
+                            </div>
+                            <div id="collapse4" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    (PM10: 156 - 235) No realices actividades al aire libre. Acudir al médico si se presentan síntomas respiratorios o cardiacos. Para todos los contaminantes criterio, mayor probabilidad de presencia de síntomas respiratorios en población general. 
+                                </div>
+                            </div>
+                    </div>
+                    <!-- EXTREMADAMENTE MALA -->
+                    <div class="panel-group reto-purple" id="accordion">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse5" aria-expanded="false">Extremadamente mala (riesgo extremadamente alto) </a>
+                                </h4>
+                            </div>
+                            <div id="collapse5" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div class="panel-body">
+                                    (PM10: > 235) Permanece en espacios interiores. Acudir al médico si se presentan síntomas respiratorios o cardiacos. Para todos los contaminantes criterio, incremento en la probabilidad de síntomas severos respiratorios en población general.
+                                </div>
+                        </div>
+                    </div><br>
+
+					<!-- <h3>🟢 Buena:</h3> (PM10: 0 - 50) Disfruta las actividades al aire libre. Se considera que el riesgo es mínimo o nulo.
 					<p></p><br>
 
 					<h3>🟡 Aceptable:</h3> (PM10: 51 - 75) Considera reducir las actividades físicas vigorosas al aire libre. Las personas sensibles pueden experimentar síntomas respiratorios (asmáticos).
@@ -196,23 +287,27 @@
 					<p></p><br>
 
 					<h3>🟣 Extremadamente mala:</h3> (PM10: > 235) Permanece en espacios interiores. Acudir al médico si se presentan síntomas respiratorios o cardiacos. Para todos los contaminantes criterio, incremento en la probabilidad de síntomas severos respiratorios en población general.
+                    <p></p><br> -->
+
+                    <h3> Calidad del aire (Estación Miguel Alemán):</h3> Podemos ver los niveles históricos promedio (enero - marzo de 2020) de partículas suspendidas (PM10) en el aire que proveen los sensores para detectar picos en los niveles de contaminación en determinado lugar de la ciudad. Este tipo de análisis permiten que el Gobierno Municipal tome las medidas adecuadas de manera focalizada para mejorar las condiciones ambientales de la zona.
                     <p></p><br>
                     
                     <div class="google-data-studio">
-                        <iframe width="820" height="470" src="https://datastudio.google.com/embed/reporting/88b91297-f9ba-4f58-bad7-7729a09e1929/page/RPbzB" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <!-- <iframe width="820" height="470" src="https://datastudio.google.com/embed/reporting/88b91297-f9ba-4f58-bad7-7729a09e1929/page/RPbzB" frameborder="0" style="border:0" allowfullscreen></iframe> -->
+                        <iframe width="820" height="470" src="https://datastudio.google.com/embed/reporting/e8c751b3-57bf-43b3-bc6b-91a8ba447512/page/39hzB" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
 					<br><br>
                 </div>
              </div>
         </div><br>
-        <!-- END GIRAS -->
+        <!-- END CALIDAD DEL AIRE -->
 
-        <!-- CLUBES -->
+        <!-- DATOS -->
         <div id="clubes">
             <div class="container no-padding">
                 <div class="container-temario-interno">
                     <h2>DATOS<span> ABIERTOS</span></h2>
-                    <p>Aprende y colabora construyendo tecnología para el bien común junto con otros ciudadanos y mentores de Codeando México, Lab León y Here Technologies.</p>
+                    <p>Consulta los conjuntos de datos en formatos abiertos que se encuentran públicos para la ciudadanía.</p>
                 </div>
             </div>
         </div>
@@ -221,18 +316,42 @@
                 <div class="container-temario-interno">
                     <div class="col-xs-12">
                         <div class="col-sm-12">
-							<h3>REGISTRO CERRADO</h3>
-                            <br>
-							<p>Gracias por tu interés, el registro ha cerrado para esta edición. Te recomendamos seguir las redes sociales de Lab León para estar al tanto de futuros cursos y convocatorias.</p>
-							<!-- <script src="https://static.airtable.com/js/embed/embed_snippet_v1.js"></script><iframe class="airtable-embed airtable-dynamic-height" src="https://airtable.com/embed/shrBqexkLXUhxapUC?backgroundColor=purple" frameborder="0" onmousewheel="" width="100%" height="2676" style="background: transparent; border: 1px solid #ccc;"></iframe> -->
-                            <img class="modifica-espacio" src="img/table.png" alt="Clubes" />
+                            <h3>¿QUÉ SON LOS DATOS ABIERTOS?</h3>
+                            Los datos abiertos son los datos digitales de carácter público que son accesibles en línea. Estos conjuntos de datos o contenido, es abierto si cualquiera es libre de usar, reusar y redistribuir el mismo; sujeto a sólo, cuando mucho,  cumplir con el requisito de que se haga referencia de la fuente o similar.
+                            <p></p><br>
+
+                            <!-- CONJUNTOS DE DATOS -->
+                            <div class="panel-group reto-gray" id="accordion">
+                                <div class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapsen" aria-expanded="false">CONJUNTOS DE DATOS </a>
+                                    </h4>
+                                </div>
+                                <div id="collapsen" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <a href="#">Ubicación estaciones de medio ambiente (GEOJSON)</a>.
+                                    </div>
+                                    <div class="panel-body">
+                                        <a href="#">Datos climatológicos (CSV)</a>.
+                                    </div>
+                                    <div class="panel-body">
+                                        <a href="#">Datos ambientales (CSV)</a>.
+                                    </div>
+                                </div>
+                            </div><br>
+
+                            <h3>APRENDE CÓMO UTILIZAR LOS DATOS ABIERTOS:</h3>
+                            El Gorbierno Municipal a través de LAB León y Codeando México pone a tu disposición el curso de <b>Datos Abiertos y Hacking Cívico</b>, el cual tiene como objetivo habilitar las capacidades de la ciudadanía y los servidores públicos en el uso y generación de datos abiertos para el bien común.
+                            <p></p><br>
+
+                            <a class="link change-color" href="https://aprendeleon.com/cursos/datos-abiertos-y-hacking-civico/">¡APRENDE MÁS!</a>
                         </div>
                     </div>
                     <div class="clearfix"></div><br><br>
                 </div>
              </div>
         </div>
-        <!-- END CLUBES -->
+        <!-- END DATOS -->
 
         <!-- FOOTER -->
         <div class="footer">
@@ -262,7 +381,7 @@
                     </div>
                 </div><br>
 				<div class="text-footer">
-					Derechos reservados 2021 ©
+					Dirección General de Innovación, Dirección General de Medio Ambiente, LAB León 2021 ©
 				</div>
             </div>
         </div>
