@@ -84,18 +84,6 @@
             </div>
         </div>
 
-        <!-- Mapbox -->
-        <div id='map' style='width: 100%; height: 450px;'></div>
-            <script>
-                mapboxgl.accessToken = 'pk.eyJ1IjoicmljYXJkb21pcm9uIiwiYSI6ImNrM25zd2xxYTF0cHczbW4xanI4NnR5dXYifQ.Opb-lL0Si3GS8MUlG6fdsQ';
-                var map = new mapboxgl.Map({
-                container: 'map',
-                style: 'mapbox://styles/ricardomiron/ckkmvnf8m3hfm17p5jv54dlnf', // stylesheet location
-                center: [-101.6827918, 21.1213316], // starting position [lng, lat]
-                zoom: 12 // starting zoom
-                });
-            </script>
-
         <div id="temario-secundario">
             <div class="container no-padding">
                 <div class="container-temario-interno">
@@ -187,6 +175,18 @@
                 </div>
              </div>
         </div>
+
+        <!-- Mapbox -->
+        <div id='map' style='width: 100%; height: 450px;'></div>
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoicmljYXJkb21pcm9uIiwiYSI6ImNrM25zd2xxYTF0cHczbW4xanI4NnR5dXYifQ.Opb-lL0Si3GS8MUlG6fdsQ';
+            var map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/ricardomiron/ckkmvnf8m3hfm17p5jv54dlnf', // stylesheet location
+            center: [-101.6827918, 21.1213316], // starting position [lng, lat]
+            zoom: 11 // starting zoom
+            });
+        </script>
         <!-- END SENSORES -->
 
         <!-- CALIDAD DEL AIRE -->
@@ -273,27 +273,11 @@
                                 </div>
                         </div>
                     </div><br>
-
-					<!-- <h3>🟢 Buena:</h3> (PM10: 0 - 50) Disfruta las actividades al aire libre. Se considera que el riesgo es mínimo o nulo.
-					<p></p><br>
-
-					<h3>🟡 Aceptable:</h3> (PM10: 51 - 75) Considera reducir las actividades físicas vigorosas al aire libre. Las personas sensibles pueden experimentar síntomas respiratorios (asmáticos).
-					<p></p><br>
-
-					<h3>🟠 Mala:</h3> (PM10: 76 - 155) Evita las actividades físicas (tanto moderadas como vigorosas) al aire libre. Para todos los contaminantes criterio existe probabilidad de disminución en la capacidad pulmonar en personas sanas.
-					<p></p><br>
-
-					<h3>🔴 Muy mala:</h3> (PM10: 156 - 235) No realices actividades al aire libre. Acudir al médico si se presentan síntomas respiratorios o cardiacos. Para todos los contaminantes criterio, mayor probabilidad de presencia de síntomas respiratorios en población general. 
-					<p></p><br>
-
-					<h3>🟣 Extremadamente mala:</h3> (PM10: > 235) Permanece en espacios interiores. Acudir al médico si se presentan síntomas respiratorios o cardiacos. Para todos los contaminantes criterio, incremento en la probabilidad de síntomas severos respiratorios en población general.
-                    <p></p><br> -->
-
+                    <!-- Google Data Studio  -->
                     <h3> Calidad del aire (Estación Miguel Alemán):</h3> Podemos ver los niveles históricos promedio (enero - marzo de 2020) de partículas suspendidas (PM10) en el aire que proveen los sensores para detectar picos en los niveles de contaminación en determinado lugar de la ciudad. Este tipo de análisis permiten que el Gobierno Municipal tome las medidas adecuadas de manera focalizada para mejorar las condiciones ambientales de la zona.
                     <p></p><br>
                     
                     <div class="google-data-studio">
-                        <!-- <iframe width="820" height="470" src="https://datastudio.google.com/embed/reporting/88b91297-f9ba-4f58-bad7-7729a09e1929/page/RPbzB" frameborder="0" style="border:0" allowfullscreen></iframe> -->
                         <iframe width="820" height="470" src="https://datastudio.google.com/embed/reporting/e8c751b3-57bf-43b3-bc6b-91a8ba447512/page/39hzB" frameborder="0" style="border:0" allowfullscreen></iframe>
                     </div>
 					<br><br>
