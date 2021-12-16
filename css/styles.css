@@ -24,7 +24,7 @@ body {
 
 .link:hover {
     color: #F4F3F4;
-    background: #F8C35C;
+    background: #53235F;
     text-decoration: none;
 }
 
@@ -152,7 +152,7 @@ body {
 }
 
 .navbar-inverse .navbar-nav>li>a:hover {
-    color: #F8C35C;
+    color: #53235F;
 }
 
 /** CONTAINER ESTUDIANTES **/
@@ -580,7 +580,7 @@ strong a:hover {
 
 #clubes {
     width: 100%;
-    background: #F8C35C;
+    background: #53235F;
     padding-top: 15px;
     padding-bottom: 15px;
 }

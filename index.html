@@ -37,8 +37,8 @@
                         <li class="active"><a href="#giras">SOBRE LOS SENSORES</a></li>
                         <li class="active"><a href="#temario">MEDIO AMBIENTE</a></li>
                         <li class="active"><a href="#clubes">MOVILIDAD</a></li>
-                        <li class="active"><a href="#clubes">TELEGESTIÓN</a></li>
-                        <li class="active"><a href="#clubes">CONECTIVIDAD</a></li>
+                        <li class="active"><a href="#telegestion">TELEGESTIÓN</a></li>
+                        <li class="active"><a href="#conectividad">CONECTIVIDAD</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
@@ -202,8 +202,8 @@
         <div id="temario">
             <div class="container no-padding">
                 <div class="container-temario-interno">
-                    <h2>MEDIO <span>AMBIENTE</span></h2>
-                    <p>Conoce cómo funciona la medición de calidad del aire, así como las recomendaciones y nivel de riesgo asociado.</p>
+                    <h2>DATOS <span> MEDIO AMBIENTE</span></h2>
+                    <p>Datos sobre calidad del aire, así como las recomendaciones y nivel de riesgo asociado.</p>
                 </div>
             </div>
         </div>
@@ -300,12 +300,12 @@
         </div><br>
         <!-- END CALIDAD DEL AIRE -->
 
-        <!-- DATOS -->
+        <!-- MOVILIDAD -->
         <div id="clubes">
             <div class="container no-padding">
                 <div class="container-temario-interno">
-                    <h2>DATOS<span> ABIERTOS</span></h2>
-                    <p>Consulta los conjuntos de datos en formatos abiertos que se encuentran públicos para la ciudadanía.</p>
+                    <h2>DATOS<span> MOVILIDAD</span></h2>
+                    <p>Datos sobre movilidad que ayudan a determinar los niveles de servicio de tráfico en la ciudad.</p>
                 </div>
             </div>
         </div>
@@ -314,42 +314,86 @@
                 <div class="container-temario-interno">
                     <div class="col-xs-12">
                         <div class="col-sm-12">
-                            <h3>¿QUÉ SON LOS DATOS ABIERTOS?</h3>
-                            Los datos abiertos son los datos digitales de carácter público que son accesibles en línea. Estos conjuntos de datos o contenido, es abierto si cualquiera es libre de usar, reusar y redistribuir el mismo; sujeto a sólo, cuando mucho,  cumplir con el requisito de que se haga referencia de la fuente o similar.
+                            <h3>TIPOS DE CONTEO</h3>
+                            Los sensores de movilidad son dispositivos especializados para el cálculo de niveles de servicio de tráfico a través de la lectura de señales Bluetooth y Wifi dentro de la red de sensores, manteniendo siempre la privacidad de los datos, brindando adicionalmente cálculos como Matriz Origen-Destino y tiempos de desplazamiento.
                             <p></p><br>
 
-                            <!-- CONJUNTOS DE DATOS -->
-                            <div class="panel-group reto-gray" id="accordion">
+                            <!-- BUENA -->
+                            <div class="panel-group reto-green" id="accordion">
                                 <div class="panel-heading">
                                     <h4 class="panel-title">
-                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapsen" aria-expanded="false">CONJUNTOS DE DATOS </a>
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse1" aria-expanded="false">Tráfico fluido </a>
                                     </h4>
                                 </div>
-                                <div id="collapsen" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                <div id="collapse1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
                                     <div class="panel-body">
-                                        <a href="#">Ubicación estaciones de medio ambiente (GEOJSON)</a>.
-                                    </div>
-                                    <div class="panel-body">
-                                        <a href="#">Datos climatológicos (CSV)</a>.
-                                    </div>
-                                    <div class="panel-body">
-                                        <a href="#">Datos ambientales (CSV)</a>.
+                                        (PM10: 0 - 50) Disfruta las actividades al aire libre. Se considera que el riesgo es mínimo o nulo.
                                     </div>
                                 </div>
-                            </div><br>
+                            </div>
+                            <!-- MODERADA -->
+                            <div class="panel-group reto-yellow" id="accordion">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse2" aria-expanded="false">Tráfico regular </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            (PM10: 51 - 75) Considera reducir las actividades físicas vigorosas al aire libre. Las personas sensibles pueden experimentar síntomas respiratorios (asmáticos).
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- MALA -->
+                            <div class="panel-group reto-orange" id="accordion">
+                                    <div class="panel-heading">
+                                        <h4 class="panel-title">
+                                            <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="index.html#collapse3" aria-expanded="false">Tráfico lento </a>
+                                        </h4>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                        <div class="panel-body">
+                                            (PM10: 76 - 155) Evita las actividades físicas (tanto moderadas como vigorosas) al aire libre. Para todos los contaminantes criterio existe probabilidad de disminución en la capacidad pulmonar en personas sanas.
+                                        </div>
+                                    </div>
+                            </div>
 
-                            <h3>APRENDE CÓMO UTILIZAR LOS DATOS ABIERTOS:</h3>
-                            El Gorbierno Municipal a través de LAB León y Codeando México pone a tu disposición el curso de <b>Datos Abiertos y Hacking Cívico</b>, el cual tiene como objetivo habilitar las capacidades de la ciudadanía y los servidores públicos en el uso y generación de datos abiertos para el bien común.
-                            <p></p><br>
-
-                            <a class="link change-color" href="https://aprendeleon.com/cursos/datos-abiertos-y-hacking-civico/" target="_blank">¡APRENDE MÁS!</a>
+                            <iframe width="820" height="470" src="https://datastudio.google.com/embed/reporting/0c3fb507-7eb6-426f-ae9c-e3d82b506117/page/Bne0B" frameborder="0" style="border:0" allowfullscreen></iframe>
                         </div>
                     </div>
                     <div class="clearfix"></div><br><br>
                 </div>
              </div>
         </div>
-        <!-- END DATOS -->
+        <!-- END MOVILIDAD -->
+
+                <!-- CONECTIVIDAD -->
+                <div id="clubes">
+                    <div class="container no-padding">
+                        <div class="container-temario-interno">
+                            <h2>DATOS<span> CONECTIVIDAD</span></h2>
+                            <p>Datos sobre los puntos de conectividad a internet en zonas urbanas y rurales de la ciudad.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="clubes-secundario" id="temario-secundario">
+                    <div class="container no-padding">
+                        <div class="container-temario-interno">
+                            <div class="col-xs-12">
+                                <div class="col-sm-12">
+                                    <h3>PUNTOS DE CONEXIÓN</h3>
+                                    En la primera fase del servicio de internet gratuito se instalaron 51 nodos, mismos que ya están activos en 48 comunidades rurales y 3 en plazas públicas, mismos que benefician a 119 centros escolares, en beneficio de 20 mil habitantes.
+                                    <p></p><br>
+
+                                    <iframe width="820" height="600" src="https://datastudio.google.com/embed/reporting/3e39bd54-c64e-40f8-b276-35950a2239d2/page/VKpVB" frameborder="0" style="border:0" allowfullscreen></iframe>
+        
+                                </div>
+                            </div>
+                            <div class="clearfix"></div><br><br>
+                        </div>
+                     </div>
+                </div>
+                <!-- END CONECTIVIDAD -->
 
         <!-- FOOTER -->
         <div class="footer">
