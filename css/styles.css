@@ -14,7 +14,7 @@ body {
 }
 
 .link {
-    background: #F4476D;
+    background: #006D67;
     padding: 10px 5px 10px 5px;
     color: #F4F3F4;
     font-size: 24px;
@@ -41,7 +41,7 @@ body {
 }
 
 .footer ul li a:hover{
-    color: #02C39A !important;
+    color: #133A65 !important;
     text-decoration: none !important;
     outline: 0 !important;
 }
@@ -84,8 +84,8 @@ body {
 
 /** TOP NAVIGATION **/
 .navbar-inverse {
-    background-color: #02C39A;
-    border-color: #02C39A;
+    background-color: #133A65;
+    border-color: #133A65;
     min-height: 62px;
 }
 
@@ -128,7 +128,7 @@ body {
 }
 
 .navbar-inverse .navbar-nav>.active>a {
-    color: #F0F3BD;
+    color: #32B1B4;
     background-color: transparent;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
@@ -143,7 +143,7 @@ body {
 
 .navbar-inverse .navbar-nav>li>a {
     margin-top: 6px;
-    color: #F0F3BD;
+    color: #32B1B4;
     background-color: transparent;
     font-family: 'Roboto Mono', monospace;
     font-weight: 700;
@@ -178,7 +178,7 @@ body {
 }
 
 .container-tech {
-    background: #02C39A;
+    background: #133A65;
     width: 100%;
 }
 
@@ -316,7 +316,7 @@ body {
 
 .container-generacion {
     width: 100%;
-    background: #02C39A;
+    background: #133A65;
 }
 
 .container-generacion img {
@@ -387,7 +387,7 @@ body {
 
 #temario {
     width: 100%;
-    background: #F4476D;
+    background: #006D67;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -568,7 +568,7 @@ strong a:hover {
     color: #57D9D9;
 }
 .container-temas p .color-gray:hover {
-    color: #F0F3BD;
+    color: #32B1B4;
 }
 
 #giras {
@@ -853,7 +853,7 @@ strong a:hover {
 
 .reto-green .accordion-toggle {
     padding: 5px;
-    background: #02C39A;
+    background: #133A65;
     padding-right: 30px;
 }
 
@@ -920,7 +920,7 @@ strong a:hover {
 
 .reto-green .panel-heading [data-toggle="collapse"].collapsed:after,
 .reto-green .panel-heading [data-toggle="collapse"]:after {
-    color: #02C39A;
+    color: #133A65;
 }
 
 .reto-red .panel-heading [data-toggle="collapse"].collapsed:after,
